@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Informativa sulla Privacy — WorkTracker | GhedoLab</title>
+<title>WorkTracker — GhedoLab</title>
 <style>
   :root {
     --brand: #0284C7;
@@ -26,7 +26,7 @@
   header {
     background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
   }
   header .brand {
@@ -34,34 +34,43 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     opacity: 0.85;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
-  header h1 { font-size: 26px; margin: 0; }
+  header h1 { font-size: 32px; margin: 0 0 12px; }
+  header p { font-size: 17px; opacity: 0.95; max-width: 560px; margin: 0 auto; }
   main {
     max-width: 780px;
     margin: 0 auto;
-    padding: 30px 20px 60px;
+    padding: 40px 20px 60px;
   }
   h2 {
-    font-size: 19px;
+    font-size: 20px;
     color: var(--brand-dark);
-    margin-top: 34px;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 6px;
+    margin-top: 40px;
   }
-  h3 { font-size: 16px; color: var(--brand-dark); margin-top: 22px; }
-  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 14px; }
-  th, td { border: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
-  th { background: var(--bg-alt); }
-  .note {
-    background: #eef7ff;
-    padding: 12px 16px;
-    border-left: 4px solid var(--brand);
-    margin: 16px 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 14px;
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
   }
-  .updated { color: var(--muted); font-size: 14px; }
+  .plan {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--bg-alt);
+  }
+  .plan h3 { margin: 0 0 8px; font-size: 16px; color: var(--brand-dark); }
+  .plan p { margin: 0; font-size: 14px; color: var(--muted); }
+  .features { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+  .feature {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--text);
+  }
   footer {
     text-align: center;
     padding: 30px 20px;
@@ -70,6 +79,7 @@
     border-top: 1px solid var(--border);
     margin-top: 40px;
   }
+  footer a { color: var(--brand); }
   a { color: var(--brand); }
 </style>
 </head>
@@ -77,92 +87,55 @@
 
 <header>
   <div class="brand">GhedoLab</div>
-  <h1>Informativa sulla Privacy — WorkTracker</h1>
+  <h1>WorkTracker</h1>
+  <p>Timbratura ore lavoro, gestione trasferte aziendali e note spese — con un server che ospiti tu, non noi.</p>
 </header>
 
 <main>
 
-<p class="updated"><em>Ultimo aggiornamento: [DA COMPILARE — data della pubblicazione effettiva su Play Store]</em></p>
+<h2>Cos'è WorkTracker</h2>
+<p>WorkTracker è un'app Android per la gestione di ore lavorate, trasferte
+aziendali e spese, pensata per piccole e medie organizzazioni. A differenza
+della maggior parte delle app simili, WorkTracker non si appoggia a un
+servizio cloud gestito da terzi: ogni organizzazione ospita il proprio
+server (anche su un semplice Raspberry Pi), mantenendo pieno controllo sui
+propri dati.</p>
 
-<h2>1. Come funziona WorkTracker</h2>
-<p>WorkTracker è un'app di timbratura ore lavoro e gestione trasferte aziendali
-pensata per funzionare con un <strong>server auto-ospitato</strong> (self-hosted):
-ogni organizzazione installa ed amministra il proprio server, e l'app comunica solo
-con quel server, scelto dall'utente/amministratore in fase di associazione.</p>
-<p>Lo sviluppatore dell'app non riceve, non ospita e non ha accesso ai dati di
-lavoro, spostamento o spesa inseriti nell'app: quei dati restano sul server scelto
-dall'organizzazione che lo gestisce. Il titolare del trattamento di quei dati è
-l'organizzazione/datore di lavoro che gestisce il proprio server, non lo
-sviluppatore.</p>
-<p>Se usi WorkTracker per lavoro, per domande sui dati trattati dal tuo datore di
-lavoro tramite il server aziendale, rivolgiti al tuo referente aziendale, non allo
-sviluppatore.</p>
+<div class="features">
+  <div class="feature">📍 Trasferte e note spese</div>
+  <div class="feature">🧾 Report ed export Excel/PDF</div>
+  <div class="feature">📷 Scansione scontrini (OCR)</div>
+  <div class="feature">🔒 Server auto-ospitato</div>
+  <div class="feature">📶 Funziona anche offline</div>
+</div>
 
-<h2>2. Titolare del trattamento</h2>
-<p>WorkTracker è sviluppato da uno sviluppatore individuale (persona fisica), non
-da una società.</p>
-<p><strong>Per i dati trattati dall'app stessa:</strong><br>
-Nicholas Ghedin (sviluppatore, in arte/come sviluppatore: <strong>GhedoLab</strong>)<br>
-Contatto: <a href="mailto:ghedin.prj@gmail.com">ghedin.prj@gmail.com</a></p>
-<p><strong>Per i dati di lavoro, trasferta, spesa e localizzazione:</strong> il
-titolare è l'organizzazione che gestisce il server a cui il tuo account è
-associato. Contattala direttamente per esercitare i tuoi diritti su questi dati.</p>
+<h2>Piani</h2>
+<p>WorkTracker si rivolge sia a singoli professionisti sia a organizzazioni
+con un proprio server.</p>
 
-<h2>3. Dati raccolti dall'app e da servizi terzi</h2>
-<p><strong>Modalità Offline:</strong> tutti i dati restano esclusivamente sul
-dispositivo. Nessun dato di lavoro viene trasmesso a server dello sviluppatore o
-di terzi.</p>
-<p><strong>Modalità Online:</strong> i dati vengono sincronizzati con il server
-scelto dall'amministratore dell'organizzazione. Non esiste un server centralizzato
-gestito dallo sviluppatore.</p>
+<div class="plans">
+  <div class="plan">
+    <h3>Individuale</h3>
+    <p>Per un singolo utente, in modalità Offline sul proprio dispositivo. Include un periodo di prova gratuito.</p>
+  </div>
+  <div class="plan">
+    <h3>Server — Small</h3>
+    <p>Per organizzazioni fino a 50 utenti totali. Trasferte e report inclusi.</p>
+  </div>
+  <div class="plan">
+    <h3>Server — Base</h3>
+    <p>Per organizzazioni fino a 100 utenti totali. Trasferte e report inclusi.</p>
+  </div>
+</div>
 
-<h3>Servizi di terze parti usati dall'app</h3>
-<table>
-<tr><th>Servizio</th><th>Cosa viene inviato</th><th>Quando</th></tr>
-<tr><td>Sentry (diagnostica errori)</td><td>Stack trace tecnici, versione app. Nessun dato personale allegato di default.</td><td>Solo in caso di crash, se attivato dall'amministratore</td></tr>
-<tr><td>Photon by Komoot / OpenStreetMap (geocoding)</td><td>Testo dell'indirizzo cercato</td><td>Solo quando si cerca un indirizzo</td></tr>
-<tr><td>Google Apps Script ("Segnala un problema")</td><td>Testo segnalazione, info dispositivo, screenshot opzionale</td><td>Solo se l'utente invia volontariamente una segnalazione</td></tr>
-</table>
-<div class="note">Se alleghi uno screenshot a una segnalazione, verifica che non
-mostri dati sensibili che non vuoi condividere.</div>
-
-<h3>Permessi del dispositivo richiesti</h3>
-<ul>
-<li>Fotocamera/galleria: per foto scontrini (OCR) e screenshot di supporto opzionali</li>
-<li>Rete locale: per scoprire e comunicare con il server auto-ospitato</li>
-<li>Notifiche: per eventi di sincronizzazione (se configurati)</li>
-</ul>
-<p>L'app non richiede né usa l'accesso alla posizione GPS precisa: gli indirizzi
-sono digitati manualmente e geocodificati tramite Photon.</p>
-
-<h2>4. Conservazione e cancellazione dei dati</h2>
-<p>I dati sul dispositivo restano fino alla disinstallazione o cancellazione
-manuale. Le cancellazioni sul server vengono conservate come "tombstone" per un
-periodo limitato (attualmente 90 giorni) per la sincronizzazione tra dispositivi,
-poi rimosse fisicamente in automatico.</p>
-
-<h2>5. Nessuna pubblicità, nessuna vendita di dati</h2>
-<p>WorkTracker non contiene pubblicità e non vende né condivide dati con terzi a
-scopo commerciale o pubblicitario.</p>
-
-<h2>6. I tuoi diritti (GDPR)</h2>
-<p>Hai diritto di accedere, rettificare, cancellare i tuoi dati personali, nonché
-di opporti al trattamento o richiederne la portabilità (artt. 15-22 GDPR). Per i
-dati sul server della tua organizzazione, contatta il tuo amministratore. Per i
-dati trattati dai servizi terzi elencati sopra, contatta lo sviluppatore.</p>
-
-<h2>7. Modifiche a questa informativa</h2>
-<p>Questa informativa può essere aggiornata in futuro. La versione più recente è
-sempre disponibile a questo stesso indirizzo, ed è consultabile anche direttamente
-nell'app (Impostazioni → Informativa Privacy).</p>
-
-<h2>8. Contatti</h2>
-<p><a href="mailto:ghedin.prj@gmail.com">ghedin.prj@gmail.com</a></p>
+<h2>Chi siamo</h2>
+<p>WorkTracker è sviluppato da Nicholas Ghedin, sviluppatore individuale, sotto
+il brand GhedoLab.</p>
 
 </main>
 
 <footer>
-  GhedoLab — WorkTracker
+  GhedoLab — WorkTracker · <a href="https://ghedo-lab.github.io/Worktracker_Privacy/">Informativa Privacy</a> · <a href="mailto:ghedin.prj@gmail.com">ghedin.prj@gmail.com</a>
 </footer>
 
 </body>
