@@ -65,7 +65,7 @@
         <tr><th>Servizio</th><th>Cosa viene inviato</th><th>Quando</th></tr>
         <tr><td>Sentry (diagnostica errori)</td><td>Stack trace tecnici, modello dispositivo, versione app. Nessun dato personale (nome, email) allegato.</td><td>Automaticamente in caso di crash o errore dell'app</td></tr>
         <tr><td>Google Play Billing</td><td>Token e identificativo del prodotto acquistato, per verificare l'abbonamento</td><td>All'acquisto e periodicamente per verificarne la validità</td></tr>
-        <tr><td>Photon by Komoot / OpenStreetMap (geocoding e mappe)</td><td>Testo dell'indirizzo cercato o coordinate GPS della mappa visualizzata</td><td>Solo quando si cerca un indirizzo o si usa la mappa per una trasferta</td></tr>
+        <tr><td>Photon by Komoot / OpenStreetMap (geocoding e mappe)</td><td>Testo dell'indirizzo cercato, o coordinate del punto scelto manualmente sulla mappa (non la posizione GPS reale dell'utente)</td><td>Solo quando si cerca un indirizzo o si sceglie un punto sulla mappa per una trasferta</td></tr>
         <tr><td>Google Apps Script ("Segnala un problema")</td><td>Testo segnalazione, info dispositivo, ID anonimo, screenshot opzionale</td><td>Solo se l'utente invia volontariamente una segnalazione</td></tr>
         <tr><td>Servizio di licenza WorkTracker (solo modalità individuale, piano WorkTracker)</td><td>Email, stato della licenza, ID anonimo</td><td>All'attivazione e periodicamente per verificare la licenza</td></tr>
       </table>
@@ -75,11 +75,11 @@
       <h3>Permessi del dispositivo richiesti</h3>
       <ul>
         <li>Fotocamera/galleria: per foto scontrini (OCR on-device), immagine profilo, foto delle auto in pool, screenshot di supporto opzionali</li>
-        <li>Posizione precisa (GPS): per registrare il punto di inizio e fine di una trasferta, solo quando usi questa funzione</li>
+        <li>Posizione (solo Android 12 e precedenti): richiesta dal sistema operativo per la ricerca automatica del server sulla rete locale (protocollo NSD/mDNS), non per sapere dove si trova l'utente. Da Android 13 in poi si usa invece il permesso "Dispositivi nelle vicinanze", dichiarato esplicitamente "mai per la posizione" (neverForLocation)</li>
         <li>Rete locale: per scoprire e comunicare con il server auto-ospitato (solo modalità organizzazione)</li>
         <li>Notifiche: per promemoria personalizzati ed eventi di sincronizzazione (se configurati)</li>
       </ul>
-      <p>La posizione GPS viene usata esclusivamente per la funzione Trasferte e resta salvata solo localmente sul dispositivo (o sul server della tua organizzazione, in modalità organizzazione); non viene mai inviata al servizio di licenza né allo sviluppatore.</p>
+      <p>L'app non usa mai il GPS per tracciare la posizione dell'utente. Gli indirizzi delle trasferte vengono scelti manualmente toccando un punto sulla mappa e geocodificati tramite Photon — nessuna lettura della posizione reale del dispositivo.</p>
 
       <h2 id="cancellazione-account">4. Conservazione e cancellazione dei dati</h2>
       <p>I dati sul dispositivo restano fino alla disinstallazione o cancellazione manuale. Le cancellazioni sul server (modalità organizzazione) vengono conservate come "tombstone" per un periodo limitato (attualmente 90 giorni) per la sincronizzazione tra dispositivi, poi rimosse fisicamente in automatico.</p>
