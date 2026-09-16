@@ -186,6 +186,10 @@ nav a[aria-current="page"] { border-bottom: 2px solid var(--accent); padding-bot
   .pt-row { grid-template-columns: 1.2fr 0.9fr 0.9fr; }
   .pt-row > div { padding: 13px 12px; font-size: 13px; }
 }
+.pricing-table.single .pt-row { grid-template-columns: 1.6fr 1fr; }
+@media (max-width: 640px) {
+  .pricing-table.single .pt-row { grid-template-columns: 1.3fr 1fr; }
+}
 .pricing-cta { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .pricing-note { font-size: 13px; color: var(--text-muted); }
 
