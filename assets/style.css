@@ -88,7 +88,7 @@ header {
   padding: 14px 28px; max-width: 1080px; margin: 0 auto; gap: 20px;
 }
 .wordmark { display: flex; align-items: center; gap: 10px; font-family: var(--serif-num); font-size: 18.5px; font-weight: 700; text-decoration: none; color: var(--text); }
-.wordmark svg { width: 30px; height: 30px; flex-shrink: 0; }
+.wordmark svg, .wordmark img { width: 30px; height: 30px; flex-shrink: 0; }
 .header-right { display: flex; align-items: center; gap: 24px; }
 nav { display: flex; gap: 26px; font-size: 14.5px; }
 nav a { text-decoration: none; color: var(--text); opacity: 0.72; }
