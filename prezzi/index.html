@@ -5,7 +5,7 @@
 <script>(function(){try{var t=localStorage.getItem('wt-theme');if(!t)t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prezzi — WorkTracker</title>
-<meta name="description" content="WorkTracker è gratuito: timbrature, ferie e permessi, report. Trasferte e spese e una versione per aziende sono in sviluppo.">
+<meta name="description" content="WorkTracker Lite è gratis per sempre. WorkTracker aggiunge le trasferte, con prova gratuita e poi 1,50€/mese.">
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
@@ -44,17 +44,25 @@
 <div class="wrap">
   <section class="page-hero">
     <a href="../" class="eyebrow-link">← Torna alla home</a>
-    <h1>WorkTracker è gratuito</h1>
-    <p class="lede">Nessun piano a pagamento, nessuna carta richiesta. Tutto quello che l'app fa oggi è incluso.</p>
+    <h1>Prezzi semplici, senza sorprese</h1>
+    <p class="lede">Un piano gratuito che resta gratuito per sempre, e un piano che sblocchi quando ti servono le trasferte — per il prezzo di un caffè al mese.</p>
   </section>
 
   <section style="padding-top:0;">
-    <div class="trust-strip" style="border-top:none;">
-      <div class="trust-item"><span class="mark">✓</span><span>Timbrature</span></div>
-      <div class="trust-item"><span class="mark">✓</span><span>Ferie e permessi</span></div>
-      <div class="trust-item"><span class="mark">✓</span><span>Report PDF/Excel</span></div>
-      <div class="trust-item"><span class="mark">✓</span><span>Widget home screen</span></div>
-      <div class="trust-item"><span class="mark">✓</span><span>Dati salvati sul dispositivo</span></div>
+    <div class="pricing-table">
+      <div class="pt-row head">
+        <div></div>
+        <div><span class="plan-name">Lite</span><span class="plan-price">Gratis</span></div>
+        <div><span class="plan-name">WorkTracker</span><span class="plan-price">1,50€/mese</span></div>
+      </div>
+      <div class="pt-row"><div class="feature-name">Timbrature</div><div class="yes">Incluso</div><div class="yes">Incluso</div></div>
+      <div class="pt-row"><div class="feature-name">Ferie e permessi</div><div class="yes">Incluso</div><div class="yes">Incluso</div></div>
+      <div class="pt-row"><div class="feature-name">Report PDF/Excel</div><div class="yes">Incluso</div><div class="yes">Incluso</div></div>
+      <div class="pt-row"><div class="feature-name">Widget home screen</div><div class="yes">Incluso</div><div class="yes">Incluso</div></div>
+      <div class="pt-row"><div class="feature-name">Trasferte (km, ore viaggio)</div><div class="no">—</div><div class="yes">Incluso</div></div>
+      <div class="pt-row"><div class="feature-name">Spese con lettura scontrini</div><div class="no">—</div><div class="yes">Incluso</div></div>
+      <div class="pt-row"><div class="feature-name">Prova gratuita</div><div class="no">—</div><div class="yes">Sì, nessuna carta richiesta</div></div>
+      <div class="pt-row"><div class="feature-name">Dati salvati</div><div class="yes">Sul dispositivo</div><div class="yes">Sul dispositivo</div></div>
     </div>
     <div class="pricing-cta">
       <span class="btn btn-primary" style="opacity:0.55; cursor:default;">In arrivo su Google Play</span>
@@ -64,15 +72,8 @@
 
   <section style="padding-top:0;">
     <div class="section-head">
-      <h2>In sviluppo</h2>
-      <p>Due cose a cui stiamo lavorando. Non hanno ancora una data di uscita né un prezzo da comunicare.</p>
-    </div>
-    <div class="feature-block">
-      <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-6h14l2 6"/><path d="M5 12h14v6H5z"/><circle cx="8" cy="18" r="1.5"/><circle cx="16" cy="18" r="1.5"/></svg></div>
-      <div>
-        <h3>Trasferte e spese</h3>
-        <p>Chilometri percorsi, ore di viaggio, spese con foto dello scontrino: tutto raccolto per il rimborso a fine mese.</p>
-      </div>
+      <h2>Enterprise — in lavorazione</h2>
+      <p>Una versione per aziende e team, con licenze multi-utente gestite da un amministratore, è in sviluppo. Non ha ancora una data di uscita né un prezzo da comunicare.</p>
     </div>
     <div class="feature-block">
       <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></div>
@@ -82,8 +83,8 @@
       </div>
     </div>
     <div class="pricing-cta">
-      <a href="mailto:ghedin.prj@gmail.com?subject=WorkTracker%20-%20Interesse" class="btn btn-primary">Scrivici se ti interessa</a>
-      <span class="pricing-note">Ti avviseremo quando saranno disponibili.</span>
+      <a href="mailto:ghedin.prj@gmail.com?subject=WorkTracker%20-%20Enterprise" class="btn btn-primary">Scrivici se ti interessa</a>
+      <span class="pricing-note">Ti avviseremo quando sarà disponibile.</span>
     </div>
   </section>
 
@@ -95,16 +96,28 @@
 
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q"><span>WorkTracker resta gratis per sempre?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>Le funzioni disponibili oggi — timbrature, ferie e permessi, report, widget — restano gratuite senza scadenza e senza carta di pagamento richiesta.</p></div>
+        <button class="faq-q"><span>WorkTracker Lite resta gratis per sempre?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Sì. Timbrature, ferie e permessi, report e widget restano gratuiti senza scadenza e senza carta di pagamento richiesta.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>Quando arriveranno le trasferte e la versione per aziende?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>Sono in sviluppo. Non abbiamo ancora una data né un prezzo da comunicare — scrivici se vuoi essere avvisato quando saranno pronte.</p></div>
+        <button class="faq-q"><span>Come funziona il prezzo di WorkTracker?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>1,50€/mese, con una prova gratuita per provare le trasferte prima di decidere. Nessun pagamento una tantum per ora: solo abbonamento mensile, cancellabile quando vuoi.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q"><span>I miei dati restano sul telefono?</span><span class="plus">+</span></button>
-        <div class="faq-a"><p>Sì. In modalità individuale WorkTracker non sincronizza i tuoi dati di lavoro su nessun server: restano sul dispositivo.</p></div>
+        <button class="faq-q"><span>Cosa succede quando finisce la prova gratuita?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Le trasferte si bloccano finché non attivi l'abbonamento. Tutto il resto — timbrature, ferie, permessi, report — continua a funzionare esattamente come su WorkTracker Lite: non perdi mai l'accesso ai tuoi dati.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>I miei dati restano sul telefono anche con WorkTracker a pagamento?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Sì. Il piano individuale (Lite o WorkTracker) non sincronizza i tuoi dati di lavoro su nessun server: restano sul dispositivo. L'abbonamento serve solo a verificare che sia attivo, non a spostare i tuoi dati altrove.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Posso passare da Lite a WorkTracker più avanti?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Sì, in qualsiasi momento dalle Impostazioni dell'app. Non perdi nulla di quello che hai già registrato passando da un piano all'altro.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>WorkTracker è adatto anche a un'azienda con più dipendenti?</span><span class="plus">+</span></button>
+        <div class="faq-a"><p>Questa pagina descrive il piano individuale, pensato per una singola persona. Una versione Enterprise per team e organizzazioni è in lavorazione (vedi sopra): se ti interessa, scrivici.</p></div>
       </div>
     </div>
   </section>

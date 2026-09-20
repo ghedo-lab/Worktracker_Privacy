@@ -170,6 +170,27 @@ nav a[aria-current="page"] { border-bottom: 2px solid var(--accent); padding-bot
   .feature-block { grid-template-columns: 72px 1fr; gap: 20px; }
 }
 
+/* ---------- Pricing table ---------- */
+.pricing-table { border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--surface-card); }
+.pt-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; }
+.pt-row + .pt-row { border-top: 1px solid var(--border); }
+.pt-row > div { padding: 16px 20px; font-size: 14.5px; display: flex; align-items: center; }
+.pt-row.head > div { padding: 22px 20px; }
+.pt-row.head .plan-name { font-family: var(--serif-num); font-size: 19px; font-weight: 600; display: block; }
+.pt-row.head .plan-price { display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 4px; font-weight: 400; }
+.pt-row .feature-name { color: var(--text); font-weight: 500; }
+.pt-row.head { background: var(--bg); }
+.yes { color: var(--green); font-weight: 700; }
+.no { color: var(--text-muted); opacity: 0.45; }
+@media (max-width: 640px) {
+  .pt-row { grid-template-columns: 1.2fr 0.9fr 0.9fr; }
+  .pt-row > div { padding: 13px 12px; font-size: 13px; }
+}
+.pricing-table.single .pt-row { grid-template-columns: 1.6fr 1fr; }
+@media (max-width: 640px) {
+  .pricing-table.single .pt-row { grid-template-columns: 1.3fr 1fr; }
+}
+
 /* ---------- Pricing CTA ---------- */
 .pricing-cta { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .pricing-note { font-size: 13px; color: var(--text-muted); }
